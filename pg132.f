@@ -61,7 +61,7 @@ DECIMAL DROP FORGET C$  ( we don't need C$ and $ any more)
    UNTIL 
    DIFF !      ( store difficulty) 
    HOME CR CR 
-   ." DO YOU WANT" CR ." 1. SHORT" CR . " 2. MEDIUM" CR 
+   ." DO YOU WANT" CR ." 1. SHORT" CR ." 2. MEDIUM" CR 
    ." 3. LONG" CR ." GAME" 
    KEY 127 AND     ( pick up reply) 
    CASE 
