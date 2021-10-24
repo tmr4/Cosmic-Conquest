@@ -123,7 +123,7 @@ DECIMAL DROP FORGET C$  ( we don't need C$ and $ any more)
       65 ( left)  OF  0 -1 ENDOF 
                       0  0
    ENDCASE 
-   23 0 VHTAB 35 SPACES   (clear message ) 
+   23 0 VHTAB 35 SPACES   ( clear message ) 
    2 F C@ + EDGE-CHECK SWAP 
    1 F C@ + EDGE-CHECK SWAP ;
 
@@ -139,7 +139,7 @@ DECIMAL DROP FORGET C$  ( we don't need C$ and $ any more)
       X @ 20 * 27 + Y @ 1+ 11 * HPOSN 
       0 SKETCH                    ( blank out char. there) 
       7 HCOLOUR                   ( colour white) 
-      X @ 20 * 27 + Y @ 1+ ll * HPOSN 
+      X @ 20 * 27 + Y @ 1+ 11 * HPOSN 
       CASE                        ( draw shape) 
          2 ( a star)         OF 3 SKETCH ( draw star)     ENDOF 
          4 ( empty planet)   OF 2 SKETCH ( a planet)      ENDOF 
@@ -148,13 +148,13 @@ DECIMAL DROP FORGET C$  ( we don't need C$ and $ any more)
         16 ( players fleet)  OF 4 SKETCH ( players fleet) ENDOF 
         17 ( enemy fleet)    OF 5 SKETCH ( enemy fleet)   ENDOF 
       ENDCASE 
-   END IF ; 
+   ENDIF ; 
 
 : DRAW-SCAN                       ( draw the screen display) 
    1 F C@ 5 - 2 F C@ 5 - 
    11 0 DO 
       11 0 DO 
-              OUER EDGE-CHECK OUER EDGE-CHECK 
+              OVER EDGE-CHECK OVER EDGE-CHECK 
               J Y ! I X ! GALAXY C@
               PRINT-IT 1+
            LOOP 
@@ -164,7 +164,7 @@ DECIMAL DROP FORGET C$  ( we don't need C$ and $ any more)
 
 : DRAW-FIGURES    ( draw the totals in the disp1ay) 
    2 10 VHTAB PLANETS @ 5 .R 
-   20 33 VHTAB PLANETS @ C-PLANETS @ - Wl * 
+   20 33 VHTAB PLANETS @ C-PLANETS @ - W1 * 
                1 3 FLEETS @ 2 3 FLEETS @ + W2 * +
                1 5 FLEETS @ 2 5 FLEETS @ + W2 * +
                TROOPS @ W3 * - 6 .R
@@ -184,7 +184,7 @@ DECIMAL DROP FORGET C$  ( we don't need C$ and $ any more)
    0 3 F !                     ( no ships left) 
    0 5 F ! ;                   ( no legions left) 
 
-: MOUE-FLEET (  X Y ---  ) 
+: MOVE-FLEET (  X Y ---  ) 
    2DUP 
    0 1 F C@ 2 F C@ GALAXY C!   ( remove old symbol) 
    16 ROT ROT GALAXY C!       ( position fleet) 
@@ -195,7 +195,7 @@ DECIMAL DROP FORGET C$  ( we don't need C$ and $ any more)
                   ( and take apropriate action) 
    EDGE-CHECK SWAP EDGE-CHECK SWAP 2DUP GALAXY C@
    CASE 
-      0 ( space)      OF MOUE-FLEET ENDOF 
+      0 ( space)      OF MOVE-FLEET ENDOF 
       8 ( black hole) OF 23 0 VHTAB ." FLEET IN BLACK HOLE"
                          MOVE-FLEET DELAY NEW-FLEET 
                          23 0 VHTAB 35 SPACES ENDOF 
