@@ -63,7 +63,7 @@ HEX
       ENDIF 
       COMPUTER? 
       IF 
-         COMUTER-TURN 
+         COMPUTER-TURN 
       ENDIF 
       GAME-END? 
    UNTIL 
