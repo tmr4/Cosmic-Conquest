@@ -191,7 +191,7 @@ DECIMAL DROP FORGET C$  ( we don't need C$ and $ any more)
    2 F C! 1 F C! ;             ( update fleet array) 
 
 : CHECK-POSITION  ( X Y --- ) 
-                  ( check if move to position X Y is possib 
+                  ( check if move to position X Y is possible) 
                   ( and take apropriate action) 
    EDGE-CHECK SWAP EDGE-CHECK SWAP 2DUP GALAXY C@
    CASE 
