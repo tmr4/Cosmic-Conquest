@@ -128,7 +128,7 @@
    H1 CLEAR-MSGE ;
 
 : NOT-PLANET   ( there isn't a planet where he's trying to land)
-   10 0 VHTAB ." NO PLANET THERE'
+   10 0 VHTAB ." NO PLANET THERE"
    DELAY H1 CLEAR-MSGE ;
 
 : ATTACK       ( attack a planet controlled by the computer)
