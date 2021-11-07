@@ -21,7 +21,7 @@ I enhanced the game for my own 16 bit cell Forth.  It has the following enhancem
 * `cc_e.f` enhanced version of original game
 * `dforth.bin` Forth and Cosmic Conquest binary for 65C02
 
-# How to play on your 65C02 SBC
+# How to play on a 6502 Emulator
 
 1. Install [py65](https://github.com/mnaberez/py65).
 2. Run py65 monitor, loading the 65C02 binary with `py65mon -m 65c02 -r dforth.bin -i 880a -o 8400`.
