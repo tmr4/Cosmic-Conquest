@@ -11,6 +11,8 @@ I enhanced the game for my own 16 bit cell Forth.  It has the following enhancem
 * X or x now quits the game, and,
 * Eliminated non-standard words.
 
+# Screenshot
+
 ![Screenshot of gameplay](screenshot.png)
 
 # Contents
