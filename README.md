@@ -11,6 +11,8 @@ I enhanced the game for my own 16 bit cell Forth.  It has the following enhancem
 * X or x now quits the game, and,
 * Eliminated non-standard words.
 
+bfox9900 has a version with more refined Forth code https://github.com/bfox9900/CAMEL99-V2/tree/master/CosmicConquest.
+
 # Screenshot
 
 ![Screenshot of gameplay](screenshot.png)
